@@ -4,7 +4,7 @@ A simple python script that takes an input wordlist and password complexity poli
 
 ## Usage
 
-phunnel.py [-h] [-m M] [-u] [-l] [-n] [-s] [-ns] infile outfile
+phunnel.py [-h] [-m M] [-max MAX] [-u] [-l] [-n] [-s] [-ns] infile outfile
 
 positional arguments:
 
@@ -13,12 +13,13 @@ positional arguments:
 
 optional arguments:
 
-  -h, --help  show this help message and exit\
-  -m M        Minimum password length\
-  -u          Require at least 1 uppercase\
-  -l          Require at least 1 lowercase\
-  -n          Require at least 1 number\
-  -s          Require at least 1 special\
+  -h, --help  show this help message and exit
+  -m M        Minimum password length
+  -max MAX    Maximum password length
+  -u          Require at least 1 uppercase
+  -l          Require at least 1 lowercase
+  -n          Require at least 1 number
+  -s          Require at least 1 special
   -ns         Password can contain NO special
 
 ## Password Lists
@@ -46,4 +47,9 @@ As it turns out, there are other tools that can be used to filter password compl
 - [PACK](https://github.com/iphelix/pack)
 - [LavaPasswordFactory](https://github.com/lavalamp-/LavaPasswordFactory)
 - [Password_Filter](https://github.com/rajnepali/Password_Filter)
+
+## Todo
+
+- Integrate complexity filters such as zxcvbn
+- More precise controls for other filters (consecutive chars, repeat chars, etc.)
 

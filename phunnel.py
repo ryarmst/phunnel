@@ -8,7 +8,7 @@ import os
 import sys
 import argparse
 
-__version__ = 0.02
+__version__ = 0.03
 
 SPECIAL_CHARS = "[\+\!\@\#\$\%\^\&\*\(\)\{\}\[\]\;\:\'\"\\\?\/\.\>\,\<\`\~\_\-\=\|]"
 
@@ -53,7 +53,7 @@ def main(arguments):
         if (args.s and (re.search(SPECIAL_CHARS, lines) is None)):
             continue
         # Ensure no special chars (not strictly exaustive - should make NOT num/alpha)
-        if (args.ns and (re.search("[\+\!\@\#\$\%\^\&\*\(\)\{\}\[\]\;\:\'\"\\\?\/\.\>\,\<\`\~\_\-\=\|]", lines) is not None)):
+        if (args.ns and (re.search(SPECIAL_CHARS, lines) is not None)):
             continue
         args.outfile.write(lines)
 
